@@ -3,6 +3,11 @@ seek = input("What do you want to find? ")
 
 def readText(textfile):
     f = open(textfile, "rt")
-    print(f.read())
+    teksten = (f.read())
+    teksten = teksten.lower()
+    if seek in teksten:
+        print("true")
+    else:
+        print("false")
 
 readText(textfile)
