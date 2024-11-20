@@ -1,17 +1,15 @@
 import tkinter as tk
 from tkinter import filedialog
-import os
+
 
 #Function to open file explorer and select a file
 def choose_file():
     root = tk.Tk()      #Create the main tkinter window
     root.withdraw()     #Hide the blank tkinter window
 
-    initial_directory = os.path.abspath("short_stories") #Converts to an absolute path
-
     file_path = filedialog.askopenfilename(
         title="Select a text file",             #Title of the file dialog
-        initialdir=initial_directory,           #Open Directly to the "short_stories" folder
+        initialdir="short_stories",             #Open Directly to the "short_stories" folder
         filetypes=[("Text files", "*.txt")]     #Only show .txt files
     )
     return file_path    #Return the selected file's path
