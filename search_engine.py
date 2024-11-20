@@ -1,4 +1,5 @@
-textfile = "textfile.txt"
+filename = input("Write the name of you text file here: ")
+textfile = "shortstories/" + filename + ".txt"
 seek = input("What do you want to find? ").lower()
 
 def readText(textfile):
